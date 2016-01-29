@@ -53,7 +53,7 @@ b'\xe6\xac\xa2\xe8\xbf\x8e'
 >>> e.decode('gbk')#如果解码为gbk就是乱码
 '娆四繋'
 
-python SQLALChemy
+python ORM 框架  SQLALChemy
 http://www.jianshu.com/p/e6bba189fcbd
 
 
