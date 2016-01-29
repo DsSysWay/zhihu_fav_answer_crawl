@@ -1,1 +1,61 @@
-https://www.zhihu.com/people/liao-bao-hua/collections
+这是一个使用scrapy构建的简易爬虫
+目前具备的功能如下：
+1.抓取知乎的关注人的收藏夹的所有答案
+2.输出到文本中，输出格式为：
+［问题标题，收藏答案链接］
+3、可以订制抓取的关注人的数量上限
+
+后续需要添加的功能
+1、把数据保存到关系型数据库中
+2、使用简单的统计功能输出收藏量最高的答案
+3、将答案的内容拉取下来，导出为可视化文本
+4、对问题和答案进行聚类归并
+
+如果你也有兴趣，欢迎fork，会持续更新
+ 
+
+
+知乎的关注人列表的情况：
+拉取关注人首屏是网页直出的
+拉取后续的会使用局部请求，回来的是
+夹杂了html文本的json字符串，可以直接
+内嵌到关注人页面形成视图。
+前端就不需要再为新的内容生成html标签了
+
+通过写这个小工具了解到的一些东西：
+http://www.w3school.com.cn/xpath/xpath_syntax.asp  xpath 语法
+借助chrome  extension CSS and Xpath helper可以在线查看xpath工具是否正确
+
+如果爬虫有异常不能正常工作，可以将日志级别调整为debug，方便定位问题
+出现http code是因为请求数据有问题服务器无法验证必要字段！
+
+截取某个节点多个属性中的某一个可以使用
+/nodename/@attribute_name
+//nodename[@attribute_name="attribute_mark"]/@other_attributename
+
+四指向上可以进行自由切换程序
+cmd＋tab可以进行应用间切换
+cmd ＋ shift ＋ ［ 可以进行同个程序之间tab的切换
+把鼠标放在某个程序上按 cmd ＋ T 可以在视图内生成tab
+按ctrl ＋ space 可以出spotlight 输入 程序可以快速检索出应用程序来
+
+
+
+1、python2与python3稍微有点区别
+2、python2中默认的字符编码格式都是unicode,在字符串前加'u'，表示unicode 编码
+3、将unicode转换成中文，只需要用deconde解码就可以了
+>>> u='欢迎'
+>>> e=u.encode()
+>>> e
+b'\xe6\xac\xa2\xe8\xbf\x8e'
+>>> e.decode()#python3中默认就是utf-8编码
+'欢迎'
+>>> e.decode('gbk')#如果解码为gbk就是乱码
+'娆四繋'
+
+python SQLALChemy
+http://www.jianshu.com/p/e6bba189fcbd
+
+
+
+
